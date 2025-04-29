@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1742705517 source:d:\parallel_programming\experiment1_1\main.cpp
+	<fstream>
+	<chrono>
+	<vector>
+	<cstring>
+

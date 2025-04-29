@@ -1,0 +1,24 @@
+Matrix-Vector Multiplication Test
+Size,Time (μs)
+8,51200,0,True
+16,25600,1,True
+32,12800,3,True
+64,6400,12,True
+128,3200,50,True
+256,1600,188,True
+512,800,833,True
+1024,400,5489,True
+2048,200,46330,True
+4096,100,153715,True
+Matrix-Vector Multiplication Test
+Size,Time (μs)
+8,51200,0,True
+16,25600,1,True
+32,12800,2,True
+64,6400,12,True
+128,3200,73,True
+256,1600,229,True
+512,800,808,True
+1024,400,3459,True
+2048,200,14961,True
+4096,100,61389,True
