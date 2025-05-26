@@ -6,16 +6,18 @@
 #include <iomanip>
 #include <sys/time.h>
 // #include <omp.h>
-#include <arm_neon.h>
+// #include <arm_neon.h>
+
 // 可以自行添加需要的头文件
 // #include "ntt_pthread.h" // 这是ntt的pthread代码（并行）
-#include "ntt_openmp.h"  // 这是ntt的openmp代码（并行）
+// #include "ntt_openmp.h"  // 这是ntt的openmp代码（并行）
+// #include "ntt_CRT.h"
+#include "ntt_CRTpthread.h"
+// #include "ntt_fourDivide.h" // 这是四除法的ntt代码（并行）
+// #include "nttnor.h"
+
 
 // 下面的头文件是对应的NTT函数，由于篇幅问题单开了，使用的时候导入即可
-// #include "nttnor.h" //这是ntt的普通代码（没有并行）
-// #include "neon_good.h" // 这是ntt的neon代码（并行）
-// #include "neon_improve.h"    // 这是ntt的neon代码（并行，只有蝴蝶）
-// #include "ntt_neon_cmgood.h" // 这是ntt的neon代码（并行，实现Montgomery+蝴蝶）
 
 void fRead(int *a, int *b, int *n, int *p, int input_id){
     // 数据输入函数
