@@ -10,14 +10,17 @@
 // # include "ntt_mpi.h"
 // # include "ntt_mpiB.h"
 // # include "ntt_mpiomp.h"
-// #include "ntt_mpiNONb.h"——wrong
-# include "ntt_mpipth.h"
-// # include "ntt_mpithread.h"——wrong
+// #include "ntt_mpiNONb.h"
+// # include "ntt_mpipth.h"
+// # include "ntt_mpiimprove.h"
+# include "ntt_mpisimd.h"
+
+// # include "ntt_mpiBimprove.h"
 
 // mpic++ main.cc -o main -O2 -fopenmp -lpthread -std=c++11
 // qsub qsub_mpi.sh
-
-
+// perf record -e cpu-clock,cycles,instructions,cache-references,cache-misses,L1-dcache-loads,L1-dcache-load-misses,LLC-loads,LLC-load-misses ./main
+// perf report > 文件名.txt
 
 void fRead(int *a, int *b, int *n, int *p, int input_id, int rank){
     // 数据输入函数，只在根进程上读取
@@ -132,7 +135,7 @@ int main(int argc, char *argv[])
         double start_time = MPI_Wtime();
 
         // 执行MPI版本的多项式乘法
-        poly_multiply(a, b, ab, n_, p_, MPI_COMM_WORLD, 8);
+        poly_multiply(a, b, ab, n_, p_, MPI_COMM_WORLD);
 
         // 记录结束时间
         double end_time = MPI_Wtime();
