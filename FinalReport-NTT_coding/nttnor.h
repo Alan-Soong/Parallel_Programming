@@ -4,7 +4,8 @@
 #include <fstream>
 #include <chrono>
 #include <iomanip>
-#include <sys/time.h>
+// #include <sys/time.h>
+// #include <omp.h>
 
 // 快速幂求模逆
 int mod_pow(int base, int exp, int mod) {
