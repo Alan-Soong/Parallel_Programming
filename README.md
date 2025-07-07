@@ -7,3 +7,6 @@ Our CODINGs are under construction!!!
 - Architectural programming
 - SIMD programming
 - Pthread + OpenMP programming
+- MPI programming
+- CUDA programming
+- Final Report of NTT Coding
